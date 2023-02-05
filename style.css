@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Public+Sans&display=swap');
+
+* {
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+	font-family: 'Public Sans', sans-serif;
+}
+
+body {
+	background-color: hsl(0,0%, 98%)
+}
+
+.btn {
+	color: #fff;
+	text-decoration: none;
+	display: inline-block;
+	background: linear-gradient(to right, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
+	padding: 10px 20px;
+}
+.btn:hover {
+	opacity: .8;
+}
+.hire-btn {
+	border-radius: 20px;
+}
+
+.float-container > * {
+	float: left;
+}
+.float-container::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+header {
+	background-color: hsl(0, 0%, 98%);
+	padding: 0px 20px;
+	position: fixed;
+	width: 100%;
+	box-shadow: 0px 1px 1px hsl(0, 0%, 78%);
+}
+
+/* Nav Starts */
+header nav {
+	width: 50%;
+	text-align: center;
+}
+header nav ul {
+	list-style-type: none;
+}
+header nav ul li, nav ul li a {
+	display: inline-block;
+}
+
+nav ul li a{
+	text-decoration: none;
+	color: #333;
+	padding: 30px 20px;
+}
+nav ul li a:hover {
+	background: transparent linear-gradient(to right, hsl(136, 65%, 51%), hsl(192, 70%, 51%)) no-repeat bottom;
+	background-size: 100% 4px;
+}
+/* Nav ends */
+header > h1 {
+	font-family: Courgette;
+}
+header > h1, header > div {
+	width: 25%;
+	padding: 20px;
+}
+
+header > div  {
+	text-align: right;
+}
+
+header > div .hamburger {
+	display:none;
+}
+/* Header ends here.. */
+
+
+/* ====================== */
+/* main styless.. */
+/* ====================== */
+main {
+	padding-top: 80px;
+}
+
+main > section:nth-child(even) {
+	background-color: hsl(0, 0%, 95%);
+}
+
+/* First section starts */
+section {
+	padding: 60px 0px;
+}
+
+section > h2 {
+	font-family: Courgette;
+}
+
+.first-section > div {
+	width: 50%;
+	color: hsl(0, 0%, 60%);
+}
+.first-section > div:first-child {
+	text-align: center;
+}
+.first-section > div:first-child p {
+	margin: 15px 0px;
+}
+.first-section > div:first-child img {
+	width: 80%;
+	max-width: 400px;
+	border-radius: 50%;
+}
+.first-section > div:last-child {
+	margin-top: 50px;
+	word-spacing: 3px;
+	text-align: justify;
+	padding-right: 50px;
+}
+.first-section > div:last-child a {
+	margin-top: 40px;
+}
+/* First section ends */
+
+
+/* Second section ends */
+.second-section, .third-section {
+	padding: 70px 60px;
+}
+.second-section > h2, .third-section > h2 {
+	margin-bottom: 40px;
+}
+.second-section article {
+	width: 10%;
+	text-align: center;
+	font-family: Courgette;
+}
+.second-section article p {
+	font-family: Courgette;
+}
+.second-section article img {
+	width: 100%;
+	max-width: 80px;
+	margin-bottom: 10px;
+}
+
+/* THird section starts */
+.third-section article {
+	width: 23%;
+	margin: 20px 1%;
+	background-color: #fff;
+}
+.third-section article img {
+	width: 100%;
+}
+.third-section article > a {
+	display: inline-block;
+	text-decoration: none;
+	color: #333;
+}
+.third-section article > a:hover {
+	color: hsl(136, 65%, 51%);
+}
+.third-section article > *:not(img) {
+	padding: 10px 20px;
+}
+.third-section article h3 {
+	font-family: Courgette;
+}
+.third-section article p {
+	font-size: 0.9rem;
+	color: hsl(0, 0%, 60%);
+	padding-bottom: 30px;
+}
+/* THird section ends */
+
+
+/* Fourth section starts */
+.fourth-section {
+	text-align: center;
+}
+.fourth-section form {
+	width: 50%;
+	text-align: left;
+	margin: auto;
+}
+.fourth-section form div {
+	margin: 15px 0px;
+}
+.fourth-section form input, .fourth-section form textarea {
+	display: block;
+	width: 100%;
+	padding: 12px;
+	border-radius: 3px;
+	border: none;
+	margin: 5px 0px;
+}
+.fourth-section form textarea {
+	height: 200px;
+	resize: none;
+}
+.fourth-section form input[type="submit"] {
+	font-size: 1.2rem;
+}
+
+
+@media screen and (max-width: 700px) {
+	/* Header responsiveness */
+	header > div > .btn {
+		display: none;
+	}
+	header > div > .hamburger {
+		display: inline-block;
+	}
+	header > h1, header > div {
+		width: 50%;
+	}
+	
+	header nav {
+		width: 100%;
+		background: linear-gradient(to bottom, grey 60%, hsla(0,0%, 90%, 0.2));
+		position: absolute;
+		top: 70px;
+		left: 0px;
+		height: 70vh;
+		padding-top: 30px;
+		display: none;
+	}
+	
+	ul {
+		background-color: #fff;
+		width: 80%;
+		margin: auto;
+		border-radius: 10px;
+	}
+	
+	header nav ul li {
+		display: block;
+	}
+	nav ul li a{
+		padding: 20px;
+	}
+	nav ul li a:hover {
+		background: transparent;
+	}
+	
+	/* Main responsioveness */
+	main .float-container > * {
+		float: none;
+		width: 90%;
+		margin: auto;
+	}
+	.first-section > div:last-child {
+		padding-right: 0px;
+	}
+}
